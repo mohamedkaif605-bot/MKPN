@@ -20,7 +20,7 @@ export default function App() {
     }
   ]);
   const [currentArticleId, setCurrentArticleId] = useState('himalayas');
-  const [newTitle, setNewTitle] = useState('');git iniy
+  const [newTitle, setNewTitle] = useState('');git init
   const [newCategory, setNewCategory] = useState('News');
   const [newContent, setNewContent] = useState('');
 
