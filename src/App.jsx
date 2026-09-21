@@ -20,13 +20,13 @@ export default function App() {
     }
   ]);
   const [currentArticleId, setCurrentArticleId] = useState('himalayas');
-  const [newTitle, setNewTitle] = useState('');git init
+  const [newTitle, setNewTitle] = useState('');
   const [newCategory, setNewCategory] = useState('News');
   const [newContent, setNewContent] = useState('');
 
   const activeArticle = articles.find(a => a.id === currentArticleId) || articles[0];
 
-  // Editor Login: MDKAIF@290603 / MDKAIF@290603
+  // Editor Login Credentials
   const handleEditorLogin = (e) => {
     e.preventDefault();
     if (username === 'MDKAIF@290603' && password === 'MDKAIF@290603') {
@@ -39,12 +39,12 @@ export default function App() {
     }
   };
 
-  // Master Admin Terminal Login: MKPN-MASTER-8042
+  // Master Admin Terminal Login
   const handleMasterLogin = (e) => {
     e.preventDefault();
     if (masterKey.trim() === 'MKPN-MASTER-8042') {
       setIsAdmin(true);
-      setIsEditor(true); // Super admin inherits editor rights
+      setIsEditor(true);
       setShowMasterModal(false);
       setMasterKey('');
     } else {
@@ -207,8 +207,8 @@ export default function App() {
               <h2 style={styles.subHeading}>Revision History</h2>
               <hr style={styles.hr} />
               <ul style={styles.historyList}>
-                <li><strong>20 Sept 2026, 12:00 PM:</strong> Verified public release by MKPN Master.</li>
-                <li><strong>System:</strong> Protected under MKPN dual-tier administrative security.</li>
+                <li><strong>Verified Release:</strong> Standard public reference revision.</li>
+                <li><strong>System:</strong> Protected under MKPN administrative security.</li>
               </ul>
             </div>
           )}
@@ -292,7 +292,7 @@ CORE_REVISION: v2.4.0-stable`}
             <form onSubmit={handleEditorLogin} style={styles.form}>
               <input 
                 type="text" 
-                placeholder="Username (e.g. MDKAIF@290603)" 
+                placeholder="Username (e.g. admin_editor)" 
                 value={username} 
                 onChange={e => setUsername(e.target.value)} 
                 style={styles.input} 
